@@ -22,17 +22,6 @@ Route.get('/api', ({ request }) => {
 });
 
 // * Next Routes
-Route.get('/b', ({ request, response }) => {
-  const query = request.get();
-  return Next.render(request.request, response.response, '/b', query);
-});
-
-Route.get('/post/:id', ({ request, response, params }) =>
-  Next.render(request.request, response.response, '/b', {
-    id: params.id
-  })
-);
-
 Route.get(
   '*',
   ({ request, response }) =>

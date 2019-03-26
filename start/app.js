@@ -17,7 +17,8 @@ const providers = [
   '@adonisjs/lucid/providers/LucidProvider',
   '@adonisjs/mail/providers/MailProvider',
   '@adonisjs/drive/providers/DriveProvider',
-  'adonis-nextjs/providers/NextProvider'
+  'adonis-nextjs/providers/NextProvider',
+  '@adonisjs/websocket/providers/WsProvider'
 ];
 
 /*
