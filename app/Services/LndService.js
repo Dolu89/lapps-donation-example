@@ -71,6 +71,20 @@ class LndService {
                         // TODO Here is the place where you know an invoice is paid. Get it using data.id == ln_invoice (invoice table)
                         // Send an event with websocket to tell to everyone, an invoice was paid
 
+                        // Get invoice from database using data.id
+                        const invoice = await Invoice.findBy('ln_invoice', data.id)
+                        // Set is_paid to true
+                        invoice.is_paid = true
+                        invoice.save()
+
+                        const channel = Ws.getChannel('donation')
+
+                        // Emit an event to the current donor (using donation#${invoice.socket_id}) to display a success message
+                        channel.topic(`donation`).emitTo('donate-invoicepaid', { isPaid: true }, [`donation#${invoice.socket_id}`])
+
+                        // Emit an event to tell everyone a donation was just made
+                        channel.topic(`donation`).broadcast('donate-newdonation', { donor: invoice.donor, message: invoice.message, price: data.received })
+                        
                     } catch (error) {
                         console.log("data error", error)
                     }

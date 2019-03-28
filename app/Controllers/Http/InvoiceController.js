@@ -42,7 +42,7 @@ class InvoiceController {
                 is_paid: false
             })
 
-            // Return invoice created. You can use invoice.request to create QR Code in front app
+            // Return created invoice. You can use invoice.request to create QR Code in front app
             return response.send(invoice)
 
         } catch (error) {
