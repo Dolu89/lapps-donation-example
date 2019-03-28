@@ -5,7 +5,7 @@
   "description": "Adonisjs boilerplate for API server with pre-configured JWT and NextJS",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon --inspect server.js",
     "build": "next build ./next",
     "export": "next export ./next",
     "start": "NODE_ENV=production node server.js",

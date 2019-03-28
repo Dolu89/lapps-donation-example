@@ -17,9 +17,7 @@ const Route = use('Route');
 const Next = use('Adonis/Addons/Next');
 const handler = Next.getRequestHandler();
 
-Route.get('/api', ({ request }) => {
-  return { greeting: 'Hello world in JSON' };
-});
+Route.post('/invoice', 'InvoiceController.generate')
 
 // * Next Routes
 Route.get(
