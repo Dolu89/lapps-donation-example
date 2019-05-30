@@ -36,7 +36,7 @@
     "adonis-nextjs": "^3.1.1",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "ln-service": "^34.6.0",
+    "ln-service": "^38.0.0",
     "mysql": "^2.16.0",
     "next": "^8.0.3",
     "nodemon": "^1.18.9",
