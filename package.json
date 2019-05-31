@@ -34,7 +34,7 @@
     "@adonisjs/websocket-client": "^1.0.9",
     "@zeit/next-css": "^1.0.1",
     "adonis-nextjs": "^3.1.1",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "ln-service": "^34.6.0",
     "mysql": "^2.16.0",
